@@ -44,9 +44,9 @@ public class UserInfo implements UserDetails {
     @NotEmpty
     private String email;
 
-    private boolean enabled;
+    private Boolean enabled;
 
-    private List<Role> roles;
+    private transient List<Role> roles;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
